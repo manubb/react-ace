@@ -4,10 +4,11 @@ import AceEditor from '../src/ace.js';
 import ace from 'ace-builds';
 import 'ace-builds/webpack-resolver';
 
-ace.require('ace/mode/jsx');
+require('ace-builds/src-noconflict/mode-jsx');
 
 const languages = [
   'javascript',
+  'jsx',
   'java',
   'python',
   'xml',
@@ -39,16 +40,16 @@ const themes = [
 ]
 
 languages.forEach((lang) => {
-  ace.require(`ace/mode/${lang}`)
-  ace.require(`ace/snippets/${lang}`)
+  require(`ace-builds/src-noconflict/mode-${lang}`)
+  require(`ace-builds/src-noconflict/snippets/${lang}`)
 })
 
 themes.forEach((theme) => {
-  ace.require(`ace/theme/${theme}`)
+  require(`ace-builds/src-noconflict/theme-${theme}`)
 })
 /*eslint-disable no-alert, no-console */
-ace.require('ace/ext/language_tools');
-ace.require('ace/ext/searchbox');
+require('ace-builds/src-noconflict/ext-language_tools');
+require('ace-builds/src-noconflict/ext-searchbox');
 
 const defaultValue =
 `function onLoad(editor) {
