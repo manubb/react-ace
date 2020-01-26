@@ -52,7 +52,7 @@
     "file-loader": "^3.0.0",
     "husky": "^2.2.0",
     "jsdom": "^15.1.0",
-    "mocha": "^6.1.4",
+    "mocha": "^7.0.1",
     "nyc": "^14.0.0",
     "prettier": "^1.17.0",
     "pretty-quick": "^1.10.0",
